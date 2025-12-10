@@ -26,7 +26,7 @@ body {
   font-family: 'GMarketSans';
   background: #000;
 }
-.link_box{padding:10px;border-radius:5px;background-color:#Fff;color:#000;}
+.link_box{padding:10px;border-radius:5px;background-color:#000;color:#fff;}
 .main {
   display: block;
   margin: 0 auto;
@@ -159,4 +159,5 @@ h2 span {
     columns: 1;
   }
 }
+
 
