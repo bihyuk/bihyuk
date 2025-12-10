@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'Mabinogi_Classic';
+  src: url('font/Mabinogi_Classic_TTF.ttf');
+}
+@font-face {
+  font-family: 'GMarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+    format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: 'GMarketSans';
+  background: #000;
+}
+
+.main {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.content {
+  background-color: #fff;
+  padding-top: 0;
+  border-radius: 15px;
+  padding-bottom: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+}
+header > ul {
+  display: flex;
+}
+header > ul > li {
+  font-wight: bol;
+  margin: 15px;
+  font-size: 14px;
+  display: block;
+  width: 80px;
+  text-align: center;
+  border-radius: 50px;
+  padding: 8px;
+  color: #fff;
+  background-color: #000;
+}
+header > ul > li:hover {
+  transition: 0.3s;
+  background-color: #005666;
+  cursor: pointer;
+}
+header > ul > li.active {
+  background-color: #005666;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+section {
+  text-align: center;
+}
+h2 {
+  margin: 20px 0;
+}
+section > p {
+  font-family: Mabinogi_Classic, sans-serif;
+  font-size: 14px;
+}
+h2 span {
+  color: #005666;
+}
+
+.main-image {
+  max-width: 240px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* ----------------------------------------------------
+   ▼▼▼  여기서부터 갤러리 스타일 추가  ▼▼▼
+---------------------------------------------------- */
+
+.gallery-container {
+  max-width: 1000px;
+  margin: 30px auto 0;
+  padding: 20px;
+}
+
+.gallery {
+  columns: 3;
+  column-gap: 15px;
+}
+
+.gallery-item {
+  width: 100%;
+  margin-bottom: 15px;
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* 라이트박스 */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .gallery {
+    columns: 2;
+  }
+}
+@media (max-width: 600px) {
+  .gallery {
+    columns: 1;
+  }
+}
